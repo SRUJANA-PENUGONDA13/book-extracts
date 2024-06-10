@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# Book Extracts from Pan Macmillan
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a single-page web application built with React titled "Book Extracts from Pan Macmillan". The application displays a list of book extracts in a sortable table and is designed to be mobile responsive and visually appealing.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Fetch Book Extracts**: Fetches a list of 10 book extracts from the Pan Macmillan API.
+- **Sortable Table**: Allows sorting by Author, Title, Reading Time, and Publication Date in ascending, descending, and default order.
+- **Responsive Design**: Ensures the page is mobile-friendly and visually appealing with handcrafted CSS (no frameworks like Bootstrap used).
+- **Sanitized HTML Content**: Uses `DOMPurify` to sanitize author biographies to prevent XSS attacks.
+- **Interactive Elements**: Book titles and cover images link to the respective extract pages.
+- **Footer**: Displays the author's name with a link to their website or GitHub account.
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **Clone the repository**:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+   ```sh
+   git clone https://github.com/your-username/book-extracts.git
+   cd book-extracts
+   ```
 
-### `npm test`
+2. **Install dependencies**:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   ```sh
+   npm install
+   ```
 
-### `npm run build`
+3. **Start the development server**:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```sh
+   npm start
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. **Build for production**:
+   ```sh
+   npm run build
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Usage
 
-### `npm run eject`
+After starting the development server, open your browser and navigate to `http://localhost:3000` to view the application.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## API
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The application fetches book extracts from the following API endpoint:
+https://extracts.panmacmillan.com/getextracts?titlecontains=s
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Fields used from the API response:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- `jacketUrl`: URL of the book cover image.
+- `author`: Author of the book.
+- `authorBiography`: Biography of the author.
+- `title`: Title of the book.
+- `estimatedReadingTimeMinutes`: Estimated reading time in minutes.
+- `publicationDate`: Publication date of the book.
+- `isbn`: ISBN of the book (used for linking to the extract page).
 
-## Learn More
+## Dependencies
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **React**: JavaScript library for building user interfaces.
+- **DOMPurify**: Library for sanitizing HTML content.
+- **CSS3**: Used for styling with handcrafted CSS.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Acknowledgments
 
-### Code Splitting
+- Thanks to Pan Macmillan for providing the book extracts API.
+- Inspired by the need to create a user-friendly and visually appealing book extract viewer.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Contact
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+For any inquiries or feedback, feel free to reach out via [srujanapenugonda1318@gmail.com]
