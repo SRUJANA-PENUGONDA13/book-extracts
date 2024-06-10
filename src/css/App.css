@@ -1,0 +1,121 @@
+@import url("https://use.fontawesome.com/releases/v6.0.0/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Sofia");
+@import url("./vars.css");
+@import url("./reset.css");
+
+
+.brandName {
+  font-family: "Sofia", sans-serif;
+  font-size: 3rem;
+  text-shadow: 3px 3px 3px var(--gray--color);
+  color: var(--text--primary--color);
+}
+
+header {
+  height: 16vh;
+  background-color: var(--primary--color);
+  width: 100%;
+  padding: 1rem 4rem 1rem 2rem;
+  position: fixed;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--text--primary--color);
+  border-bottom: 1px solid var(--gray--color);
+
+}
+
+.main-container {
+  overflow-x: auto;
+  align-items: center;
+  z-index: 1;
+  padding: 8rem 8rem 6rem 8rem;
+  gap: 1rem;
+  min-height: 100vh;
+}
+
+table {
+  width: 100%;
+  table-layout: auto;
+  border-collapse: collapse;
+  margin: 1rem 0;
+
+  th,
+  td {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    text-align: left;
+  }
+
+  th {
+    cursor: pointer;
+  }
+
+  th:hover {
+    background-color: #f2f2f2;
+  }
+
+  img {
+    max-width: 100px;
+  }
+}
+
+footer {
+  background-color: var(--primary--color);
+  color: var(--text--primary--color);
+  padding-top: 1rem;
+  text-align: center;
+  bottom: 0;
+  height: 6vh;
+  position: sticky;
+  width: 100%;
+
+  a {
+    color: var(--text--primary--color);
+    text-decoration: none;
+  }
+
+}
+
+.lt-footer-sec {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0px;
+  height: 5rem;
+  color: var(--text--primary--color);
+  /* padding: 5px; */
+  background-color: var(--primary--color);
+}
+
+footer ul {
+  list-style: none;
+  padding-inline-start: 0px;
+}
+
+footer li {
+  display: inline;
+}
+
+footer li a i {
+  color: var(--text--primary--color);
+  font-size: var(--text--small);
+  padding: 0px 1.5rem;
+}
+
+@media (max-width: 600px) {
+  header {
+    height: fit-content !important;
+  }
+
+  .main-container {
+    padding: 18rem 3rem 5rem 3rem;
+  }
+
+  table {
+    font-size: 1rem;
+  }
+
+  img {
+    max-width: 50px;
+  }
+}
